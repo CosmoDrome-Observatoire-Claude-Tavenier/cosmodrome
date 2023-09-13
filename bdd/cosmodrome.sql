@@ -1,3 +1,9 @@
+-- Commande initialisation de la base de données : --
+
+--    sqlite3 cosmodrome.db < cosmodrome.sql     --
+
+
+
 CREATE TABLE 'pages' (
 'id' INTEGER DEFAULT NULL PRIMARY KEY AUTOINCREMENT,
 'title' VARCHAR(80) NOT NULL  DEFAULT 'NULL',
