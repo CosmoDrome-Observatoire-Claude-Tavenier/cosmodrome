@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0fefb6d925.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>CosmoDrôme</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="navbar--brand">CosmoDrôme</h1>
+        <div class="navbar--buttons">
+            <a class="navbar--button">Contact</a>
+            <button class="navbar--button" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <div class="navbar--deployed "> <!-- navbar--deployed__inactive -->
+        <button class="navbar--deployed--close" onclick="toggleNavbar()"><i class="fas fa-times"></i></button>
+        <div class="navbar--deployed--links">
+            <a href="#" class="navbar--deployed--link navbar--deployed--link__active">Accueil</a>
+            <a href="" onclick="deployDropdown(2)" class="navbar--deployed--link">Découvrir</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+            <a href="#" class="navbar--deployed--link">Réserver</a>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="hero--container">
+            <div class="hero--titles">
+                <h2 class="hero--subtitle">Observatoire Claude Tavenier</h2>
+                <h1 class="hero--title">CosmoDrôme</h1>
+            </div>
+            <p class="hero--content">Notre but est de promouvoir et développer l'activité astronomique avec pour
+                principale ambition la
+                vulgarisation de cette discipline. Notre volonté est de rendre accessible à tous la possibilité de
+                découvrir
+                et de pratiquer l'astronomie, quel que soit le niveau de connaissances de chacun.</p>
+            <div class="hero--buttons">
+                <button class="hero--button">Découvrir</button>
+                <button class="hero--button">Réserver</button>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
