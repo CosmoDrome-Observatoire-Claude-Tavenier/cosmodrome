@@ -178,8 +178,14 @@ body {
     width: 5px;
 }
 
+.navbar--deployed--link--container {
+    width: calc(100% - 15px);    
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar--deployed--link {
-    width: calc(100% - 5px);
+    width: 100%;
     padding: 15px 20px;
     border-radius: 5px;
     color: var(--primary-color);
@@ -204,6 +210,43 @@ body {
 .navbar--deployed--link__active:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+}
+
+.navbar--deployed--dropdown {
+    display: none;
+}
+
+.navbar--deployed--dropdown__active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 50px;
+    padding: 10px 0;
+    animation: showDropdown 0.2s ease-in-out;
+}
+
+@keyframes showDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hideDropdown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
 }
 
 /* Hero banner */
@@ -284,6 +327,27 @@ body {
 
 .hero--button:hover {
     scale: 1.1;
+}
+
+/* Home footer */
+.home--footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home--footer p {
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-align: center;
+    opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
