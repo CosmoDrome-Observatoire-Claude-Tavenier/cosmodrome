@@ -1,4 +1,4 @@
--- Commande initialisation de la base de données : --
+--         File to create the database           --
 
 --    sqlite3 cosmodrome.db < cosmodrome.sql     --
 
@@ -6,15 +6,17 @@
 
 CREATE TABLE 'pages' (
 'id' INTEGER DEFAULT NULL PRIMARY KEY AUTOINCREMENT,
-'title' VARCHAR(80) NOT NULL  DEFAULT 'NULL',
+'title' TEXT NOT NULL,
+'page_url_name' TEXT NOT NULL,
+'page_path' TEXT NOT NULL,
 'position' INTEGER DEFAULT NULL,
 'id_parent' INTEGER DEFAULT NULL
 );
 
 CREATE TABLE 'components' (
 'id' INTEGER DEFAULT NULL PRIMARY KEY AUTOINCREMENT,
-'type' VARCHAR(80) NOT NULL  DEFAULT 'NULL',
-'value' MEDIUMTEXT NOT NULL  DEFAULT 'NULL'
+'type' TEXT NOT NULL ,
+'value' TEXT NOT NULL 
 );
 
 CREATE TABLE 'pages_components' (
