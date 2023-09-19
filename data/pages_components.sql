@@ -4,3 +4,5 @@ CREATE TABLE 'pages_components' (
 'id_page' INTEGER DEFAULT NULL REFERENCES 'Pages' ('id'),
 'position' INTEGER DEFAULT NULL
 );
+
+INSERT INTO pages_components (id_component, id_page, position) VALUES(1, 1, 1)
