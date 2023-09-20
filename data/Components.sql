@@ -60,7 +60,7 @@ INSERT INTO Components (type, value) VALUES('subtitle', '11h à 13h :');
 INSERT INTO Components (type, value) VALUES('text', 'Observation à la L120 (lunette solaire) de la chromosphère solaire avec protubérances et facules.');
 INSERT INTO Components (type, value) VALUES('subtitle', '22h à 2h :');
 INSERT INTO Components (type, value) VALUES('text', '- Découverte des distances célestes, proches et lointaines, à l''aide des unités de mesure UA et AL (Unité Astronomique , Année lumière).- Notre système solaire (Saturne, Uranus*, Neptune* et Pluton).- Etoiles et constellations au pointeur laser pour se familiariser au repérage à l''œil nu.- Etoiles doubles colorées et leurs caractéristiques physiques.- Les objets de notre galaxie, La Voie lactée (nébuleuses, amas globulaires, etc.) et au-delà.');
-INSERT INTO Components (type, value) VALUES('price', '5|*|+ de 12 ans|*|Gratuit|*|- de 12 ans)');
+INSERT INTO Components (type, value) VALUES('price', '5|*|+ de 12 ans|*|0|*|- de 12 ans)');
 INSERT INTO Components (type, value) VALUES('title', 'Jour de la nuit');
 INSERT INTO Components (type, value) VALUES('text', 'Le Jour de la Nuit est une opération de sensibilisation à la pollution lumineuse, à la protection de la biodiversité nocturne et du ciel étoilé. Elle aura lieu le 14 octobre 2023.Au programme : balades nocturnes ; observations des étoiles ; sorties nature et extinctions des lumières.');
 INSERT INTO Components (type, value) VALUES('price', '5|*|+ de 12 ans|*|0|*|- de 12 ans');
