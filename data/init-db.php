@@ -1,15 +1,17 @@
 <?php
-echo 'Creating database...';
+echo "Deleting old database...\n";
 sleep(1);
-echo 'Creating "Pages"...';
+system("rm -f database.db");
+echo "Creating database...\n";
+echo "Creating \"Pages\"...\n";
 sleep(1);
-system('sqlite3 database-new.db < Pages.sql');
-echo 'Creating "Components"...';
+system("sqlite3 database.db < Pages.sql");
+echo "Creating \"Components\"...\n";
 sleep(1);
-system('sqlite3 database-new.db < Components.sql');
-echo 'Creating "pages_components"...';
+system("sqlite3 database.db < Components.sql");
+echo "Creating \"pages_components\"...\n";
 sleep(1);
-system('sqlite3 database-new.db < pages_components.sql');
+system("sqlite3 database.db < pages_components.sql");
 sleep(1);
-echo 'Done!';
+echo "Done!\n";
 ?>

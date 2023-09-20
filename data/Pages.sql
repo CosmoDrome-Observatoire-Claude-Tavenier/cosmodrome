@@ -24,11 +24,11 @@ INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('L120', '/l120'
 
 INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Prestations', '/prestations', 3, NULL);
 
-INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('La voie céleste', '/la-voie-celeste', 1, 3);
-INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Un coup d''oeil vers le ciel', '/un-coup-d-oeil-vers-le-ciel', 2, 3);
-INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Astromobile', '/astromobile', 3, 3);
-INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('La nuit des étoiles', '/la-nuit-des-etoiles', 4, 3);
-INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Jour de la nuit', '/jour-de-la-nuit', 5, 3);
+INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('La voie céleste', '/la-voie-celeste', 1, 11);
+INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Un coup d''oeil vers le ciel', '/un-coup-d-oeil-vers-le-ciel', 2, 11);
+INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Astromobile', '/astromobile', 3, 11);
+INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('La nuit des étoiles', '/la-nuit-des-etoiles', 4, 11);
+INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Jour de la nuit', '/jour-de-la-nuit', 5, 11);
 
 
 INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Hébergements', '/hebergement', 4, NULL);
