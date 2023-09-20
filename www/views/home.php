@@ -38,7 +38,7 @@
                 <p><?= $component["value"] ?></p>
             <?php elseif ($component["type"] == "note") : ?>
                 <em><?= $component["value"] ?></em>
-            <?php elseif ($component["type"] == "image") : ?>
+            <?php elseif ($component["type"] == "picture") : ?>
                 <img src="./medias/<?= $component["value"] ?>" alt="<?= $component["title"] ?>">
             <?php elseif ($component["type"] == "map") : ?>
                 <iframe src="<?= $component["value"] ?>" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
