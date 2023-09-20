@@ -29,10 +29,21 @@
         </div>
     </header>
     <main class="page--container">
-        <h1>Titre de niveau un</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam exercitationem optio ex. Unde repellat,
-            quisquam esse, at alias nam similique et aperiam eveniet fuga possimus asperiores. Qui explicabo odit
-            expedita.</p>
+        <?php foreach ($page["components"] as $component) : ?>
+            <?php if ($component["type"] == "title") : ?>
+                <h1><?= $component["value"] ?></h1>
+            <?php elseif ($component["type"] == "subtitle") : ?>
+                <h2><?= $component["value"] ?></h2>
+            <?php elseif ($component["type"] == "text") : ?>
+                <p><?= $component["value"] ?></p>
+            <?php elseif ($component["type"] == "note") : ?>
+                <em><?= $component["value"] ?></em>
+            <?php elseif ($component["type"] == "image") : ?>
+                <img src="./medias/<?= $component["value"] ?>" alt="<?= $component["title"] ?>">
+            <?php elseif ($component["type"] == "map") : ?>
+                <iframe src="<?= $component["value"] ?>" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </main>
 </body>
 

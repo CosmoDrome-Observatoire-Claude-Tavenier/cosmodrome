@@ -124,6 +124,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
     text-transform: uppercase;
     text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.50);
+    text-decoration: none;
 }
 
 .navbar--buttons {

@@ -56,7 +56,7 @@ class NavbarController {
             array_push($sorted_pages, $main_page);
         }
 
-        require_once 'views/partials/temp.php';
+        require_once 'views/partials/navbar.php';
     }
 }
 ?>
