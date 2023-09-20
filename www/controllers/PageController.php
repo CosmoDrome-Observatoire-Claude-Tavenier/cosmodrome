@@ -9,12 +9,12 @@ class PageController {
      */
     public static function showPage($page) {
         if (strtolower($page['url_path']) == "/" || strtolower($page['url_path']) == "") {
-            Database::getPageComponents($page['id']);
+            $page['components'] = Database::getPageComponents($page['id']);
             require_once 'views/home.php';
         } else if (strtolower($page['url_path']) == "/404") {
-            Database::getPageComponents($page['id']);
             require_once 'views/error.php';
         } else {
+            $page['components'] = Database::getPageComponents($page['id']);
             require_once 'views/page.php';
         }
     }

@@ -390,16 +390,22 @@ body::-webkit-scrollbar {
     font-size: 1.25rem;
 }
 
-.page--container h3 {
-    font-size: 1rem;
-}
-
 .page--container p {
     font-family: "Inter";
     font-size: 1rem;
     font-weight: 400;
     color: var(--text-color);
     text-align: center;
+}
+
+.page--container em {
+    font-family: "Inter";
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    opacity: 0.5;
+    font-style: italic;
 }
 
 .page--container img {
@@ -555,12 +561,13 @@ body::-webkit-scrollbar {
         font-size: 1.5rem;
     }
 
-    .page--container h3 {
-        font-size: 1.25rem;
-    }
-
     .page--container p {
         font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .page--container em {
+        font-size: 1rem;
         text-align: left;
     }
 

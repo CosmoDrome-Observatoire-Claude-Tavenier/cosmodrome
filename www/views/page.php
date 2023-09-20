@@ -16,14 +16,21 @@
     </header>
 
     <main class="page--container">
-        <h1>Titre de niveau un</h1>
-        <h2>Titre de niveau deux</h2>
-        <h3>Titre de niveau trois</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam exercitationem optio ex. Unde repellat,
-            quisquam esse, at alias nam similique et aperiam eveniet fuga possimus asperiores. Qui explicabo odit
-            expedita.</p>
-        <img src="./medias/example.jpg" alt="Lorem Picsum">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d364750.2364969966!2d5.463217437579753!3d44.42062296378137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ca5971bae7b5c9%3A0x352ce193a04e765e!2sCosmoDr%C3%B4me%20-%20Observatoire%20Claude%20Tavenier!5e0!3m2!1sfr!2sfr!4v1695075152146!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <?php foreach ($page['components'] as $component) : ?>
+            <?php if ($component['type'] == 'title') : ?>
+                <h1><?= $component['value'] ?></h1>
+            <?php elseif ($component['type'] == 'subtitle') : ?>
+                <h2><?= $component['value'] ?></h2>
+            <?php elseif ($component['type'] == 'text') : ?>
+                <p><?= $component['value'] ?></p>
+            <?php elseif ($component['type'] == 'note') : ?>
+                <em><?= $component['value'] ?></em>
+            <?php elseif ($component['type'] == 'image') : ?>
+                <img src="./medias/<?= $component['value'] ?>" alt="<?= $component['title'] ?>">
+            <?php elseif ($component['type'] == 'map') : ?>
+                <iframe src="<?= $component['value'] ?>" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </main>
 </body>
 
