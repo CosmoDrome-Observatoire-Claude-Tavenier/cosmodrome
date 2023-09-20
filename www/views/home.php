@@ -75,6 +75,8 @@
                         </tr>
                     </tbody>
                 </table>
+            <?php elseif ($component['type'] == 'mail') : ?>
+                <a href="mailto:<?= $component['value'] ?>"><?= $component['value'] ?></a>
             <?php elseif ($component['type'] == 'picture') : ?>
                 <img src="./medias/<?= $component['value'] ?>" alt="<?= $component['type'] ?>">
             <?php elseif ($component['type'] == 'map') : ?>
