@@ -65,6 +65,7 @@ INSERT INTO pages_components (component_id, page_id, position) VALUES(54, 15, 4)
 INSERT INTO pages_components (component_id, page_id, position) VALUES(55, 15, 5);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(56, 15, 6);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(57, 15, 7);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(113, 15, 8);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(58, 16, 1);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(59, 16, 2);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(60, 16, 3);
@@ -117,3 +118,4 @@ INSERT INTO pages_components (component_id, page_id, position) VALUES(105, 23, 1
 INSERT INTO pages_components (component_id, page_id, position) VALUES(106, 23, 12);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(107, 23, 13);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(108, 23, 14);
+
