@@ -25,6 +25,26 @@
                 <p><?= $component['value'] ?></p>
             <?php elseif ($component['type'] == 'note') : ?>
                 <em><?= $component['value'] ?></em>
+            <?php elseif ($component['type'] == 'price') : ?>
+                <?php $component['value'] = explode('|*|', $component['value']); ?>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tranche d'âge</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><?=  $component['value'][1] ?></td>
+                            <td><?= $component['value'][0] ?>€ TTC</td>
+                        </tr>
+                        <tr>
+                            <td><?=  $component['value'][3] ?></td>
+                            <td><?= $component['value'][2] ?>€ TTC</td>
+                        </tr>
+                    </tbody>
+                </table>
             <?php elseif ($component['type'] == 'picture') : ?>
                 <img src="./medias/<?= $component['value'] ?>" alt="<?= $component['type'] ?>">
             <?php elseif ($component['type'] == 'map') : ?>

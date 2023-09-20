@@ -6,7 +6,7 @@ require_once 'controllers/PageController.php';
 
 
 $url = $_SERVER['REQUEST_URI'];
-$base_url = '';
+$base_url = '/cosmodrome/www';
 $url = str_replace($base_url, '', $url); // À RETIRER POUR LA PRODUCTION
 
 $is_page_found = false;
