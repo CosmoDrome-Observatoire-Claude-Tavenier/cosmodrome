@@ -33,7 +33,7 @@ trait PagesTrait {
      */
     public static function getPageComponents($id) {
         $db = self::getInstance();
-        $query = $db->prepare("SELECT * FROM Components WHERE page_id = :id");
+        $query = $db->prepare("SELECT * FROM Components INNER JOIN pages_components ON components.id = pages_components.component_id WHERE pages_components.page_id = :id");
         $query->execute(['id' => $id]);
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
