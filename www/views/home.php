@@ -28,6 +28,12 @@
             </div>
         </div>
     </header>
+    <main class="page--container">
+        <h1>Titre de niveau un</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam exercitationem optio ex. Unde repellat,
+            quisquam esse, at alias nam similique et aperiam eveniet fuga possimus asperiores. Qui explicabo odit
+            expedita.</p>
+    </main>
 </body>
 
 </html>

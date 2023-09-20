@@ -24,5 +24,18 @@ trait PagesTrait {
         $query->execute(['id' => $id]);
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    /**
+     * Gets all page components by page id
+     * 
+     * @param int $id The id of the page
+     * @return array The page
+     */
+    public static function getPageComponents($id) {
+        $db = self::getInstance();
+        $query = $db->prepare("SELECT * FROM Components WHERE page_id = :id");
+        $query->execute(['id' => $id]);
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
