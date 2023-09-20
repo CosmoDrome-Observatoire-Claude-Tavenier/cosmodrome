@@ -1,7 +1,7 @@
 <nav class="navbar <?= $is_home ? '' : 'navbar--page' ?>">
     <a href="<?= $base_url  ?>" class="navbar--brand">CosmoDrôme</a>
     <div class="navbar--buttons">
-        <a class="navbar--button">Contact</a>
+        <a class="navbar--button" href="<?= $base_url . "/contact" ?>">Contact</a>
         <button class="navbar--button" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
     </div>
 </nav>

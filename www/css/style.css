@@ -143,6 +143,7 @@ body::-webkit-scrollbar {
     background-color: transparent;
     cursor: pointer;
     transition: scale 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .navbar--button:nth-child(2) {
@@ -409,6 +410,24 @@ body::-webkit-scrollbar {
     font-style: italic;
 }
 
+.page--container a {
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.page--container a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
 .page--container img {
     width: 100%;
     height: auto;
@@ -418,6 +437,32 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 200px;
     border: none;
+}
+
+.page--container table {
+    border-collapse: collapse;
+    font-family: 'Inter';
+}
+
+.page--container th, .page--container td {
+    border: 1px solid var(--text-color);
+    padding: 8px;
+    text-align: center;
+}
+
+.page--container tr {
+    background-color: var(--text-color);
+}
+
+.page--container tr {
+    background-color: var(--primary-color);
+}
+
+.page--container th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .page--error {
