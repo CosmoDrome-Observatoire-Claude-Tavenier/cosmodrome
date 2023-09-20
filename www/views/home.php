@@ -38,6 +38,13 @@
                 <p><?= $component['value'] ?></p>
             <?php elseif ($component['type'] == 'note') : ?>
                 <em><?= $component['value'] ?></em>
+            <?php elseif ($component['type'] == 'list') : ?>
+                <?php $component['value'] = explode('|*|', $component['value']); ?>
+                <ul>
+                    <?php foreach ($component['value'] as $value) : ?>
+                        <li><?= $value ?></li>
+                    <?php endforeach; ?>
+                </ul>
             <?php elseif ($component['type'] == 'link') : ?>
                 <?php
                     // Cleaning the link
@@ -75,6 +82,8 @@
                         </tr>
                     </tbody>
                 </table>
+            <?php elseif ($component['type'] == 'mail') : ?>
+                <a href="mailto:<?= $component['value'] ?>"><?= $component['value'] ?></a>
             <?php elseif ($component['type'] == 'picture') : ?>
                 <img src="./medias/<?= $component['value'] ?>" alt="<?= $component['type'] ?>">
             <?php elseif ($component['type'] == 'map') : ?>
