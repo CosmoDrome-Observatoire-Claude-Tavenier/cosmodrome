@@ -43,11 +43,11 @@ INSERT INTO Components (type, value) VALUES('text', 'prévoir des vêtements cha
 INSERT INTO Components (type, value) VALUES('subtitle', 'Conditions :');
 INSERT INTO Components (type, value) VALUES('text', 'L''accompagnement des enfants est obligatoire (un adulte pour dix enfants).');
 INSERT INTO Components (type, value) VALUES('title', 'La voie céleste');
-INSERT INTO Components (type, value) VALUES('text', '14 h, visite guidée du système solaire au milliardième sur le chemin de Bergiès, à partir du col de Macuègne. Laissez vos véhicules au col.16 h à 18 h, visite guidée du site avec possibilité d''observer le Soleil au PST Coronado (protubérances, facules, tâches,...)');
+INSERT INTO Components (type, value) VALUES('text', '14 h, visite guidée du système solaire au milliardième sur le chemin de Bergiès, à partir du col de Macuègne. Laissez vos véhicules au col.');
 INSERT INTO Components (type, value) VALUES('price', '20|*|+ de 12 ans|*|10|*|- de 12 ans');
 INSERT INTO Components (type, value) VALUES('text', 'L''observatoire est ouvert du 1er avril au 31 octobre (sur réservation !).');
 INSERT INTO Components (type, value) VALUES('title', 'Un coup d''oeil vers le ciel');
-INSERT INTO Components (type, value) VALUES('text', '21 h : Nuit (durée illimitée)- La voie lactée (notre galaxie et ses constituants).- Le cosmos (au-delà de notre galaxie ; aux confins de l''univers).- Instruments et méthodes (les techniques passées et modernes d''observations ; apprendre à maîtriser son instrument).- La vie dans l''univers (nos connaissances sur l''exobiologie et la recherche de signaux extraterrestres).- Observation aux instruments et notamment au T406.');
+INSERT INTO Components (type, value) VALUES('text', '21 h : Nuit (durée illimitée)');
 INSERT INTO Components (type, value) VALUES('price', '20|*|+ de 12 ans|*|10|*|- de 12 ans');
 INSERT INTO Components (type, value) VALUES('text', 'L''observatoire est ouvert du 1er avril au 31 octobre (sur réservation !).');
 INSERT INTO Components (type, value) VALUES('title', 'Astromobile');
@@ -59,7 +59,7 @@ INSERT INTO Components (type, value) VALUES('text', 'La Nuit des étoiles 2023 a
 INSERT INTO Components (type, value) VALUES('subtitle', '11h à 13h :');
 INSERT INTO Components (type, value) VALUES('text', 'Observation à la L120 (lunette solaire) de la chromosphère solaire avec protubérances et facules.');
 INSERT INTO Components (type, value) VALUES('subtitle', '22h à 2h :');
-INSERT INTO Components (type, value) VALUES('text', '- Découverte des distances célestes, proches et lointaines, à l''aide des unités de mesure UA et AL (Unité Astronomique , Année lumière).- Notre système solaire (Saturne, Uranus*, Neptune* et Pluton).- Etoiles et constellations au pointeur laser pour se familiariser au repérage à l''œil nu.- Etoiles doubles colorées et leurs caractéristiques physiques.- Les objets de notre galaxie, La Voie lactée (nébuleuses, amas globulaires, etc.) et au-delà.');
+INSERT INTO Components (type, value) VALUES('list', 'Découverte des distances célestes, proches et lointaines, à l''aide des unités de mesure UA et AL (Unité Astronomique , Année lumière).|*|Notre système solaire (Saturne, Uranus*, Neptune* et Pluton).|*|Etoiles et constellations au pointeur laser pour se familiariser au repérage à l''œil nu.|*|Etoiles doubles colorées et leurs caractéristiques physiques.|*|Les objets de notre galaxie, La Voie lactée (nébuleuses, amas globulaires, etc.) et au-delà.');
 INSERT INTO Components (type, value) VALUES('price', '5|*|+ de 12 ans|*|0|*|- de 12 ans)');
 INSERT INTO Components (type, value) VALUES('title', 'Jour de la nuit');
 INSERT INTO Components (type, value) VALUES('text', 'Le Jour de la Nuit est une opération de sensibilisation à la pollution lumineuse, à la protection de la biodiversité nocturne et du ciel étoilé. Elle aura lieu le 14 octobre 2023.Au programme : balades nocturnes ; observations des étoiles ; sorties nature et extinctions des lumières.');
@@ -94,14 +94,10 @@ INSERT INTO Components (type, value) VALUES('subtitle', 'Portable 2 :');
 INSERT INTO Components (type, value) VALUES('text', '07 50 08 48 52');
 INSERT INTO Components (type, value) VALUES('subtitle', 'Par courriel :');
 INSERT INTO Components (type, value) VALUES('mail', 'observatoire-cosmodrome@hotmail.com');
-INSERT INTO Components (type, value) VALUES('picture', 'guillaume.jpg');
-INSERT INTO Components (type, value) VALUES('text', 'Guillaume ABRARD(Animateur bénévole)');
-INSERT INTO Components (type, value) VALUES('picture', 'quentin.jpg');
-INSERT INTO Components (type, value) VALUES('text', 'Quentin VERZELE(Animateur bénévole)');
-INSERT INTO Components (type, value) VALUES('picture', 'axel.jpg');
-INSERT INTO Components (type, value) VALUES('text', 'Axel THOLENS(Animateur bénévole)');
-INSERT INTO Components (type, value) VALUES('picture', 'denis.jpg');
-INSERT INTO Components (type, value) VALUES('text', 'Denis CORRECHER(Responsable)');
+INSERT INTO Components (type, value) VALUES('profile', 'guillaume.jpg|*|Guillaume ABRARD|*|Animateur bénévole');
+INSERT INTO Components (type, value) VALUES('profile', 'quentin.jpg|*|Quentin VERZELE|*|Animateur bénévole');
+INSERT INTO Components (type, value) VALUES('profile', 'axel.jpg|*|Axel THOLENS|*|Animateur bénévole');
+INSERT INTO Components (type, value) VALUES('profile', 'denis.jpg|*|Denis CORRECHER|*|Responsable');
 INSERT INTO Components (type, value) VALUES('title', 'Liens');
 INSERT INTO Components (type, value) VALUES('subtitle', 'Office de Tourisme des Baronnies :');
 INSERT INTO Components (type, value) VALUES('link', 'https://www.baronnies-tourisme.com/');
@@ -116,3 +112,11 @@ INSERT INTO Components (type, value) VALUES('link', 'https://www.observatoiredev
 INSERT INTO Components (type, value) VALUES('subtitle', 'Observatoire des Baronnies provençales :');
 INSERT INTO Components (type, value) VALUES('link', 'https://www.obs-bp.net/');
 INSERT INTO Components (type, value) VALUES('picture', 'barnard.jpg');
+INSERT INTO Components (type, value) VALUES('note', 'Note : report possible en cas de mauvaise météo.');
+INSERT INTO Components (type, value) VALUES('text', '16 h à 18 h, visite guidée du site avec possibilité d''observer le Soleil au PST Coronado (protubérances, facules, tâches,...)');
+INSERT INTO Components (type, value) VALUES('list', 'La voie lactée (notre galaxie et ses constituants).|*|Le cosmos (au-delà de notre galaxie ; aux confins de l''univers).|*|Instruments et méthodes (les techniques passées et modernes d''observations ; apprendre à maîtriser son instrument).|*|La vie dans l''univers (nos connaissances sur l''exobiologie et la recherche de signaux extraterrestres).|*|Observation aux instruments et notamment au T406.');
+INSERT INTO Components (type, value) VALUES('picture', 'm45.jpg');
+INSERT INTO Components (type, value) VALUES('note', 'Profitez de votre visite à l''observatoire pour parcourir (de préférence à pied = 4,7 km) le système solaire au milliardième sur la route du CosmoDrôme, à partir du col de Macuègne. * Visibles en seconde partie de nuit.');
+
+
+
