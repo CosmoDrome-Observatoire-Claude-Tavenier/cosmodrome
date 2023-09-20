@@ -38,6 +38,13 @@
                 <p><?= $component['value'] ?></p>
             <?php elseif ($component['type'] == 'note') : ?>
                 <em><?= $component['value'] ?></em>
+            <?php elseif ($component['type'] == 'list') : ?>
+                <?php $component['value'] = explode('|*|', $component['value']); ?>
+                <ul>
+                    <?php foreach ($component['value'] as $value) : ?>
+                        <li><?= $value ?></li>
+                    <?php endforeach; ?>
+                </ul>
             <?php elseif ($component['type'] == 'link') : ?>
                 <?php
                     // Cleaning the link
