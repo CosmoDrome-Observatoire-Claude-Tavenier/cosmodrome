@@ -1,10 +1,12 @@
 <?php
 require_once "PagesTrait.php";
+require_once "UsersTrait.php";
 
 class Database {
     // Traits
     use PagesTrait;
-
+    use UsersTrait;
+    
     // Attributes
     private static $dbPath = "../data/database.db";
     private static $instance = null;

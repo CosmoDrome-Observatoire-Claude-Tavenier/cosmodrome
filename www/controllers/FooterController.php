@@ -1,16 +1,14 @@
 <?php
+require_once 'models/Database.php';
+
 class FooterController {
     /**
      * Shows the footer
      * 
      * @param array $page The current page
      */
-    public static function showFooter($page) {
-        if (strtolower($page['url_path']) != '/' && strtolower($page['url_path']) != '') {
-            $is_home = false;
-        } else {
-            $is_home = true;
-        }
+    public static function showFooter($base_url) {
+        $mentions = Database::getPageByUrlPath('/mentions-legales');
         require_once 'views/partials/footer.php';
     }
 }

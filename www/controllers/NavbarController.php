@@ -20,6 +20,10 @@ class NavbarController {
         $sorted_pages = [];
 
         foreach ($pages as $_page) {
+            if ($_page['position'] == null) {
+                continue;
+            }
+            
             if ($_page['parent_id'] == null) {
                 array_push($main_pages, $_page);
             } else {
@@ -56,7 +60,7 @@ class NavbarController {
             array_push($sorted_pages, $main_page);
         }
 
-        require_once 'views/partials/temp.php';
+        require_once 'views/partials/navbar.php';
     }
 }
 ?>

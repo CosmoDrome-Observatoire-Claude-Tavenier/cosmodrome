@@ -26,8 +26,26 @@ function listenToDropdown() {
     }
 }
 
+// Function to set a background color to the navbar after scroll
+function listenToScroll() {
+    let navbar = document.getElementsByClassName("navbar")[0];
+    let navbarHeight = navbar.offsetHeight;
+
+    console.log("test")
+    
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > navbarHeight) {
+            console.log("scrolled");
+            navbar.classList.add("navbar__scrolled");
+        } else {
+            navbar.classList.remove("navbar__scrolled");
+        }
+    });
+}
+
 // Function to run all initial functions
 function init() {
+    listenToScroll();
     listenToDropdown();
 }
 

@@ -66,18 +66,33 @@ html, body {
 
 body {
     position: relative;
+    background-color: var(--primary-color);
+}
+
+
+body::-webkit-scrollbar-track {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
     background-color: var(--secondary-color);
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
 }
 
 /* Variables */
 :root {
     --primary-color: #fff;
     --secondary-color: #1c1926;
+    --text-color: #343a40;
 }
 
 /* Navbar */
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -86,10 +101,19 @@ body {
     align-items: center;
     padding: 0 25px;
     height: 75px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navbar--page {
+    background: transparent;
+}
+
+.navbar__scrolled {
+    position: fixed;
     background-color: var(--secondary-color);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    transform: translateY(100%);
+    top: -75px;
 }
 
 .navbar--brand {
@@ -100,12 +124,14 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.50);
+    text-decoration: none;
 }
 
 .navbar--buttons {
     display: flex;
     flex-direction: row;
     gap: 15px;
+    text-decoration: none;
 }
 
 .navbar--button {
@@ -118,6 +144,7 @@ body {
     background-color: transparent;
     cursor: pointer;
     transition: scale 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .navbar--button:nth-child(2) {
@@ -312,6 +339,7 @@ body {
     color: var(--secondary-color);
     cursor: pointer;
     transition: scale 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .hero--button:nth-child(2) {
@@ -343,8 +371,7 @@ body {
     background: linear-gradient(180deg, rgba(26, 16, 19, 0.5) 0%, rgba(0, 0, 0, 0.25) 100%), url('../medias/hero.jpg'), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 175px;
-    margin-top: 75px;
+    height: 250px;
 }
 
 .page--header h1 {
@@ -358,7 +385,7 @@ body {
 .page--container h1, .page--container h2, .page--container h3 {
     font-family: "Inter";
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     font-size: 1.5rem;
 }
@@ -367,16 +394,40 @@ body {
     font-size: 1.25rem;
 }
 
-.page--container h3 {
-    font-size: 1rem;
-}
-
 .page--container p {
     font-family: "Inter";
     font-size: 1rem;
     font-weight: 400;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
+}
+
+.page--container em {
+    font-family: "Inter";
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.page--container a {
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.page--container a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .page--container img {
@@ -384,10 +435,65 @@ body {
     height: auto;
 }
 
+.page--container ul {
+    text-align: center;
+    
+}
+
+.page--container li {
+    list-style-type: disc;
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+
+}
+
 .page--container iframe {
     width: 100%;
     height: 200px;
     border: none;
+}
+
+.page--container .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page--container .profile img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+} 
+
+.page--container table {
+    border-collapse: collapse;
+    font-family: 'Inter';
+}
+
+.page--container th, .page--container td {
+    border: 1px solid var(--text-color);
+    padding: 8px;
+    text-align: center;
+}
+
+.page--container tr {
+    background-color: var(--text-color);
+}
+
+.page--container tr {
+    background-color: var(--primary-color);
+}
+
+.page--container th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .page--error {
@@ -405,7 +511,7 @@ body {
     font-family: "Inter";
     font-size: 4rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -413,7 +519,7 @@ body {
     font-family: "Inter";
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -421,18 +527,18 @@ body {
     font-family: "Inter";
     font-size: 1rem;
     font-weight: 400;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     text-decoration: none;
-    border: 3px solid var(--primary-color);
+    border: 3px solid var(--text-color);
     padding: 10px 20px;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
 }
 
 .page--error .page--error--link:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .page--error--img {
@@ -442,40 +548,21 @@ body {
 }
 
 /* Footers */
-.home--footer {
-    position: absolute;
-    bottom: 0;
+.footer {
     width: 100%;
     height: 50px;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 25px;
 }
 
-.home--footer p {
+.footer p {
     font-family: "Inter";
     font-size: 1rem;
     font-weight: 400;
-    color: var(--primary-color);
-    text-align: center;
-    opacity: 0.5;
-}
-
-.page--footer {
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.page--footer p {
-    font-family: "Inter";
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     opacity: 0.5;
 }
@@ -484,6 +571,10 @@ body {
     .navbar {
         padding: 0 150px;
         height: 100px;
+    }
+
+    .navbar__scrolled {
+        top: -100px;
     }
 
     .navbar--brand {
@@ -530,8 +621,7 @@ body {
     }
 
     .page--header {
-        margin-top: 100px;
-        height: 200px;
+        height: 300px;
     }
 
     .page--container {
@@ -549,12 +639,13 @@ body {
         font-size: 1.5rem;
     }
 
-    .page--container h3 {
-        font-size: 1.25rem;
-    }
-
     .page--container p {
         font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .page--container em {
+        font-size: 1rem;
         text-align: left;
     }
 
@@ -566,12 +657,29 @@ body {
         height: auto;
     }
 
-    .home--footer {
-        height: 100px;
+    .page--container .profile {
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 50px;
     }
 
-    .page--footer {
+    .page--container .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .page--container ul {
+        text-align: left;
+    }
+
+    .page--container li {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .footer {
         height: 100px;
+        padding: 0 150px;
     }
 
     .page--error {

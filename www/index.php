@@ -6,7 +6,7 @@ require_once 'controllers/PageController.php';
 
 
 $url = $_SERVER['REQUEST_URI'];
-$base_url = '/cosmodrome/www';
+$base_url = '';
 $url = str_replace($base_url, '', $url); // À RETIRER POUR LA PRODUCTION
 
 $is_page_found = false;
@@ -16,7 +16,7 @@ $pages = Database::getPages();
 foreach ($pages as $_page) {
     if (strtolower($url) == strtolower($_page['url_path'])) {
         $page = $_page;
-        PageController::showPage($page);
+        PageController::showPage($pages, $page);
         $is_page_found = true;
         break;
     }
@@ -24,9 +24,9 @@ foreach ($pages as $_page) {
 
 if (!$is_page_found) {
     $page = ['url_path' => '/404'];
-    PageController::showPage($page);
+    PageController::showPage($pages, $page);
 }
 
+FooterController::showFooter($base_url);
 NavbarController::showNavbar($pages, $page, $base_url, $url);
-FooterController::showFooter($page);
 ?>
