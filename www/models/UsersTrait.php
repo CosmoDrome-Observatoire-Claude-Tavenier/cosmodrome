@@ -24,18 +24,5 @@ trait UsersTrait {
         $query->execute(['username' => $username]);
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    /**
-     * Gets password by username
-     * 
-     * @param string $username The username of the user
-     * @return array The user
-     */
-    public static function getUserPassword($username) {
-        $db = self::getInstance();
-        $query = $db->prepare("SELECT password FROM Users WHERE username = ':username'");
-        $query->execute(['username' => $username]);
-        return $query->fetchAll(PDO::FETCH_ASSOC);
-    }
 }
 ?>
