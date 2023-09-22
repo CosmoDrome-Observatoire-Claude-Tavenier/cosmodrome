@@ -117,7 +117,7 @@ INSERT INTO Components (type, value) VALUES('text', '16 h à 18 h, visite guidé
 INSERT INTO Components (type, value) VALUES('list', 'La voie lactée (notre galaxie et ses constituants).|*|Le cosmos (au-delà de notre galaxie ; aux confins de l''univers).|*|Instruments et méthodes (les techniques passées et modernes d''observations ; apprendre à maîtriser son instrument).|*|La vie dans l''univers (nos connaissances sur l''exobiologie et la recherche de signaux extraterrestres).|*|Observation aux instruments et notamment au T406.');
 INSERT INTO Components (type, value) VALUES('picture', 'm45.jpg');
 INSERT INTO Components (type, value) VALUES('note', 'Profitez de votre visite à l''observatoire pour parcourir (de préférence à pied = 4,7 km) le système solaire au milliardième sur la route du CosmoDrôme, à partir du col de Macuègne. * Visibles en seconde partie de nuit.');
-INSERT INTO Components (type, value) VALUES('title', 'Mentions légales');
+INSERT INTO Components (type, value) VALUES('title', 'Mentions légales'); 
 INSERT INTO Components (type, value) VALUES('subtitle', 'Siège social :');
 INSERT INTO Components (type, value) VALUES('list', 'SARL CosmoDrôme|*|275 Chemin de Rolery|*|84170 MONTEUX');
 INSERT INTO Components (type, value) VALUES('subtitle', 'Siret :');

@@ -23,13 +23,19 @@
                 découvrir
                 et de pratiquer l'astronomie, quel que soit le niveau de connaissances de chacun.</p>
             <div class="hero--buttons">
-                <a class="hero--button" href="<?= $base_url . $pages[1]['url_path'] ?>"><?=$pages[1]['title']?></a>
-                <a class="hero--button" href="<?= $base_url . $pages[2]['url_path'] ?>"><?=$pages[2]['title']?></a>
+                <a class="hero--button" href="<?= $base_url . $pages[1]['url_path'] ?>">
+                    <?= $pages[1]['title'] ?>
+                </a>
+                <?php if (Database::getPageByUrlPath('/contact') != null) { ?>
+                    <a class="hero--button"
+                        href="<?= $base_url . Database::getPageByUrlPath('/contact')['url_path'] ?>">Contact</a>
+                <?php } ?>
+
             </div>
         </div>
     </header>
     <main class="page--container">
-    <?php foreach ($page['components'] as $component): ?>
+        <?php foreach ($page['components'] as $component): ?>
             <?php if ($component['type'] == 'title'): ?>
                 <h1>
                     <?= $component['value'] ?>

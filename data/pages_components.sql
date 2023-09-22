@@ -118,4 +118,27 @@ INSERT INTO pages_components (component_id, page_id, position) VALUES(105, 23, 1
 INSERT INTO pages_components (component_id, page_id, position) VALUES(106, 23, 12);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(107, 23, 13);
 INSERT INTO pages_components (component_id, page_id, position) VALUES(108, 23, 14);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(114, 24, 1);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(115, 24, 2);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(116, 24, 3);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(117, 24, 4);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(118, 24, 5);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(119, 24, 6);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(120, 24, 7);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(121, 24, 8);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(122, 24, 9);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(123, 24, 10);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(124, 24, 11);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(125, 24, 12);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(126, 24, 13);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(127, 24, 14);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(128, 24, 15);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(129, 24, 16);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(130, 24, 17);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(131, 24, 18);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(132, 24, 19);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(133, 24, 20);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(134, 24, 21);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(135, 24, 22);
+INSERT INTO pages_components (component_id, page_id, position) VALUES(136, 24, 23);
 
