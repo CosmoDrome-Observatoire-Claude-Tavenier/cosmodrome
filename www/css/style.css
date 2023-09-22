@@ -131,6 +131,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     gap: 15px;
+    text-decoration: none;
 }
 
 .navbar--button {
@@ -338,6 +339,7 @@ body::-webkit-scrollbar {
     color: var(--secondary-color);
     cursor: pointer;
     transition: scale 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .hero--button:nth-child(2) {
@@ -434,18 +436,17 @@ body::-webkit-scrollbar {
 }
 
 .page--container ul {
-    list-style-type: disc;
     text-align: center;
-
+    
 }
 
 .page--container li {
+    list-style-type: disc;
     font-family: "Inter";
     font-size: 1rem;
     font-weight: 400;
     color: var(--text-color);
-    text-align: center;
-    list-style: none;
+
 }
 
 .page--container iframe {
@@ -453,6 +454,21 @@ body::-webkit-scrollbar {
     height: 200px;
     border: none;
 }
+
+.page--container .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page--container img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+} 
 
 .page--container table {
     border-collapse: collapse;
@@ -539,6 +555,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 25px;
 }
 
 .footer p {
@@ -640,6 +657,17 @@ body::-webkit-scrollbar {
         height: auto;
     }
 
+    .page--container .profile {
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .page--container .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
     .page--container ul {
         text-align: left;
     }
@@ -649,12 +677,9 @@ body::-webkit-scrollbar {
         text-align: left;
     }
 
-    .home--footer {
+    .footer {
         height: 100px;
-    }
-
-    .page--footer {
-        height: 100px;
+        padding: 0 150px;
     }
 
     .page--error {

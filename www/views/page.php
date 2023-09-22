@@ -97,6 +97,19 @@
                 </a>
             <?php elseif ($component['type'] == 'picture'): ?>
                 <img src="./medias/<?= $component['value'] ?>" alt="<?= $component['type'] ?>">
+            <?php elseif ($component['type'] == 'profile'): ?>
+                <?php $component['value'] = explode('|*|', $component['value']); ?>
+                <div class="profile">
+                    <img src="./medias/<?= $component['value'][0] ?>" alt="<?= $component['value'][1] ?>">
+                    <div class="profile--infos">
+                        <h3>
+                            <?= $component['value'][1] ?>
+                        </h3>
+                        <p>
+                            <?= $component['value'][2] ?>
+                        </p>
+                    </div>
+                </div>
             <?php elseif ($component['type'] == 'map'): ?>
                 <iframe src="<?= $component['value'] ?>" allowfullscreen loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>

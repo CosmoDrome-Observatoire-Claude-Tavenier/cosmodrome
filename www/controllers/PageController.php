@@ -7,7 +7,7 @@ class PageController {
      * 
      * @param array $page The page to show
      */
-    public static function showPage($page) {
+    public static function showPage($pages, $page) {
         if (strtolower($page['url_path']) == "/" || strtolower($page['url_path']) == "") {
             $page['components'] = Database::getPageComponents($page['id']);
             require_once 'views/home.php';

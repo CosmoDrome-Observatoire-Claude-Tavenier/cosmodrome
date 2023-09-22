@@ -1,7 +1,9 @@
 <nav class="navbar <?= $is_home ? '' : 'navbar--page' ?>">
     <a href="<?= $base_url . "/" ?>" class="navbar--brand">CosmoDrôme</a>
     <div class="navbar--buttons">
-        <a class="navbar--button" href="<?= $base_url . "/contact" ?>">Contact</a>
+        <?php if (Database::getPageByUrlPath('/contact') != null) { ?>
+            <a class="navbar--button" href="<?= $base_url . Database::getPageByUrlPath('/contact')['url_path'] ?>">Contact</a>
+        <?php } ?>
         <button class="navbar--button" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
     </div>
 </nav>

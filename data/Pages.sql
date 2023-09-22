@@ -30,3 +30,4 @@ INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Financeurs', '
 INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Partenaires', '/partenaires', 8, NULL);
 INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Contact', '/contact', 9, NULL);
 INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Liens', '/liens', 10, NULL);
+INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Mentions Légales', '/mentions-legales', NULL, NULL);
