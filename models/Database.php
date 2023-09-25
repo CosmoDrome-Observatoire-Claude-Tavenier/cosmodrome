@@ -8,7 +8,6 @@ class Database {
     use UsersTrait;
     
     // Attributes
-    private static $dbPath = "../data/database.db";
     private static $instance = null;
 
     // Methods
@@ -17,9 +16,9 @@ class Database {
      * 
      * @return PDO The database instance
      */
-    public static function getInstance() {
+    public static function getInstance($dbPath) {
         if (self::$instance == null) {
-            self::$instance = new PDO('sqlite:' . self::$dbPath);
+            self::$instance = new PDO('sqlite:' . $dbPath);
             self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         return self::$instance;

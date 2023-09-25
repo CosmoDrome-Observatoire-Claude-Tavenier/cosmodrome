@@ -5,4 +5,4 @@ CREATE TABLE 'Users' (
 );
 
 
-INSERT INTO Users('username','password') VALUES('admin','admin');
+INSERT INTO Users('username','password') VALUES('admin','$2y$10$P8IIqCapUF1HDdGbBzkd1.wUgkOAQcOyu2H.94VjE8S9plVHOkVC2');
