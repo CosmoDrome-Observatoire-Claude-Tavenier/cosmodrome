@@ -1,7 +1,7 @@
 <?php
 // Si l'url est logout on déconnecte l'utilisateur
 $url = $_SERVER['REQUEST_URI'];
-$base_url = '/cosmodrome/www';
+$base_url = '';
 $url = str_replace($base_url, '', $url); // À RETIRER POUR LA PRODUCTION
 
 // On démarre une session
