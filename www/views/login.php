@@ -12,7 +12,7 @@
 <body>
     <div class="login--container">
         <h1>Connexion</h1>
-        <form class="login--form" action="." method="post">
+        <form class="login--form" action="<?= $base_url ?>/login" method="post">
             <label for="username">Nom d'utilisateur</label>
             <input type="text" name="username" placeholder="Ex: Jean Dupont">
             <label for="password">Mot de passe</label>

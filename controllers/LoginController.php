@@ -1,10 +1,10 @@
 <?php
 // Login controller
 
-require_once '../../models/Database.php';
+require_once '../models/Database.php';
 
 class LoginController {
-    public static function showLogin() {
+    public static function showLogin($base_url) {
         // Si le post username et password est défini on vérifie si les données sont correctes
         // Si c'est le cas on connecte l'utilisateur et on le redirige vers la page d'accueil
         // Sinon on affiche un message d'erreur
@@ -27,6 +27,6 @@ class LoginController {
                 echo '<p class="error">Nom d\'utilisateur ou mot de passe incorrect</p>';
             }
         }
-        require_once '../views/login.php';
+        require_once '../www/views/login.php';
     }
 }   
