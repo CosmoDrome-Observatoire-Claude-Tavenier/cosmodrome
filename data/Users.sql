@@ -1,0 +1,8 @@
+CREATE TABLE 'Users' (
+'id' INTEGER DEFAULT NULL PRIMARY KEY AUTOINCREMENT,
+'username' TEXT UNIQUE NOT NULL ,
+'password' TEXT NOT NULL 
+);
+
+
+INSERT INTO Users('username','password') VALUES('admin','$2y$10$P8IIqCapUF1HDdGbBzkd1.wUgkOAQcOyu2H.94VjE8S9plVHOkVC2');

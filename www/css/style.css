@@ -1,0 +1,642 @@
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+
+body::-webkit-scrollbar-track {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Variables */
+:root {
+    --primary-color: #fff;
+    --secondary-color: #1c1926;
+    --text-color: #343a40;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    height: 75px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar--full {
+    background-color: var(--secondary-color);
+}
+
+.navbar--page {
+    background: transparent;
+}
+
+.navbar__scrolled {
+    position: fixed;
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    transform: translateY(100%);
+    top: -75px;
+}
+
+.navbar--brand {
+    font-family: 'Inter';
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.50);
+    text-decoration: none;
+}
+
+.navbar--buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.navbar--button {
+    font-family: 'Inter';
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.navbar--button:nth-child(2) {
+    font-family: 'Inter';
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.navbar--button:hover {
+    scale: 1.1;
+}
+
+.navbar--deployed {
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+    position: fixed;
+    background-color: var(--secondary-color);
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    gap: 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.navbar--deployed__inactive {
+    transform: translateX(100%);
+}
+
+.navbar--deployed--close {
+    font-family: "Inter";
+    font-size: 30px;
+    color: var(--primary-color);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    align-self: flex-end;
+}
+
+.navbar--deployed--links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+}
+
+.navbar--deployed--links::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 50px;
+}
+
+.navbar--deployed--links::-webkit-scrollbar {
+    width: 5px;
+}
+
+.navbar--deployed--link--container {
+    width: calc(100% - 15px);    
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar--deployed--link {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    border: 3px solid var(--secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar--deployed--link__active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+}
+
+.navbar--deployed--link:hover {
+    border: 3px solid var(--primary-color);
+}
+
+.navbar--deployed--link__active:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.navbar--deployed--dropdown {
+    display: none;
+}
+
+.navbar--deployed--dropdown__active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 50px;
+    padding: 10px 0;
+    animation: showDropdown 0.2s ease-in-out;
+}
+
+@keyframes showDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero banner */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(26, 16, 19, 0.5) 0%, rgba(0, 0, 0, 0.25) 100%), url('../medias/hero.jpg'), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero--container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 25px;
+    gap: 20px;
+}
+
+.hero--titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.hero--title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Inter';
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero--subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    font-family: 'Inter';
+}
+
+.hero--content {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    font-family: 'Inter';
+    width: 100%;
+    text-align: center;
+}
+
+.hero--buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero--button {
+    font-family: "Inter";
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 3px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.hero--button:nth-child(2) {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.hero--button:hover {
+    scale: 1.1;
+}
+
+/* Pages */
+.page--container {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.page--header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(26, 16, 19, 0.5) 0%, rgba(0, 0, 0, 0.25) 100%), url('../medias/hero.jpg'), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+.page--header h1 {
+    font-family: "Inter";
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.page--container h1, .page--container h2, .page--container h3 {
+    font-family: "Inter";
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.page--container h2 {
+    font-size: 1.25rem;
+}
+
+.page--container p {
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.page--container em {
+    font-family: "Inter";
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.page--container a {
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.page--container a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.page--container img {
+    width: 100%;
+    height: auto;
+}
+
+.page--container ul {
+    text-align: center;
+    
+}
+
+.page--container li {
+    list-style-type: disc;
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+
+}
+
+.page--container iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.page--container .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page--container .profile img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+} 
+
+.page--container table {
+    border-collapse: collapse;
+    font-family: 'Inter';
+}
+
+.page--container th, .page--container td {
+    border: 1px solid var(--text-color);
+    padding: 8px;
+    text-align: center;
+}
+
+.page--container tr {
+    background-color: var(--text-color);
+}
+
+.page--container tr {
+    background-color: var(--primary-color);
+}
+
+.page--container th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.page--error {
+    width: 100%;
+    height: calc(100vh - 75px - 50px);
+    padding: 25px;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page--error .page--error--title {
+    font-family: "Inter";
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.page--error .page--error--content {
+    font-family: "Inter";
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.page--error .page--error--link {
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.page--error .page--error--link:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.page--error--img {
+    margin-top: 50px;
+    max-width: 85%;
+    max-height: fit-content;
+}
+
+/* Footers */
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.footer p {
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: 0 150px;
+        height: 100px;
+    }
+
+    .navbar__scrolled {
+        top: -100px;
+    }
+
+    .navbar--brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar--button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .navbar--button:nth-child(2) {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .navbar--deployed {
+        width: 30%;
+    }
+
+    .hero--container {
+        padding: 0 150px;
+        width: 60%;
+    }
+
+    .hero--titles {
+        align-items: flex-start;
+    }
+
+    .hero--title {
+        font-size: 3rem;
+    }
+
+    .hero--subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero--content {
+        text-align: left;
+    }
+
+    .hero--buttons {
+        justify-content: flex-start;
+    }
+
+    .page--header {
+        height: 300px;
+    }
+
+    .page--container {
+        padding: 50px 150px;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .page--container h1, .page--container h2, .page--container h3 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .page--container h2 {
+        font-size: 1.5rem;
+    }
+
+    .page--container p {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .page--container em {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .page--container img {
+        width: fit-content;
+        height: fit-content;
+        max-width: 100%;
+        max-height: 500px;
+        height: auto;
+    }
+
+    .page--container .profile {
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .page--container .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .page--container ul {
+        text-align: left;
+    }
+
+    .page--container li {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .footer {
+        height: 100px;
+        padding: 0 150px;
+    }
+
+    .page--error {
+        margin-top: 100px;
+    }
+
+    .page--error .page--error--img {
+        margin-top: 25px;
+        width: 500px;
+    }
+}
