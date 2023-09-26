@@ -9,12 +9,6 @@ class NavbarController {
      * @param string $url The current url
      */
     public static function showNavbar($pages, $page, $base_url, $url) {
-        if (strtolower($page['url_path']) != '/' && strtolower($page['url_path']) != '') {
-            $is_home = false;
-        } else {
-            $is_home = true;
-        }
-
         $main_pages = [];
         $secondary_pages = [];
         $sorted_pages = [];
@@ -58,6 +52,12 @@ class NavbarController {
 
             // We push the main page in the sorted pages array
             array_push($sorted_pages, $main_page);
+        }
+        
+        if ($page['url_path'] == '/404') {
+            $is_full = true;
+        } else {
+            $is_full = false;
         }
 
         require_once 'views/partials/navbar.php';

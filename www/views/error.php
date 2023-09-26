@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <script src="https://kit.fontawesome.com/0fefb6d925.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
     <title>CosmoDrôme - 404</title>
