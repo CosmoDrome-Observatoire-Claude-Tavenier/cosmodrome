@@ -3,8 +3,7 @@ CREATE TABLE 'Pages' (
 'title' TEXT NOT NULL,
 'url_path' TEXT NOT NULL,
 'position' INTEGER DEFAULT NULL,
-'parent_id' INTEGER DEFAULT NULL,
-'is_cta' INTEGER DEFAULT NULL
+'parent_id' INTEGER DEFAULT NULL
 );
 
 INSERT INTO Pages (title, url_path, position, parent_id) VALUES ('Accueil', '/', 1, NULL);

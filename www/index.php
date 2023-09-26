@@ -48,28 +48,78 @@ if (preg_match('/^\/backoffice\/?/', $url)) {
                 header('Location: ' . $base_url . '/users');
             }
 
-            if (preg_match('/^\/users\/delete-user\/[0-9]+/', strtolower($url))) {
+            if (preg_match('/^\/users\/delete-user\/[1-9][0-9]*+/', strtolower($url))) {
                 $id = explode('/', $url)[3];
                 AdminPageController::showUsersPage('/users', $base_url, 'delete', $id);
             }
 
-            if (preg_match('/^\/users\/delete-user\/[0-9]+\/confirm/', strtolower($url))) {
+            if (preg_match('/^\/users\/delete-user\/[1-9][0-9]*+\/confirm/', strtolower($url))) {
                 $id = explode('/', $url)[3];
                 Database::deleteUser($id);
                 header('Location: ' . $base_url . '/users');
             }
 
-            if (preg_match('/^\/users\/modify-user\/[0-9]+/', strtolower($url))) {
+            if (preg_match('/^\/users\/modify-user\/[1-9][0-9]*+/', strtolower($url))) {
                 $id = explode('/', $url)[3];
                 AdminPageController::showUsersPage('/users', $base_url, 'modify', $id);
             }
 
-            if (preg_match('/^\/users\/modify-user\/[0-9]+\/confirm/', strtolower($url))) {
+            if (preg_match('/^\/users\/modify-user\/[1-9][0-9]*+\/confirm/', strtolower($url))) {
                 $id = explode('/', $url)[3];
                 $username = $_POST['username'];
                 $password = $_POST['password'];
                 Database::modifyUser($id, $username, $password);
                 header('Location: ' . $base_url . '/users');
+            }
+
+            if (strtolower($url) == '/pages') {
+                AdminPageController::showPagesPage($url, $base_url);
+            }
+
+            if (strtolower($url) == '/pages/add') {
+                AdminPageController::showPagesPage('/pages', $base_url, 'add');
+            }
+
+            if (strtolower($url) == '/pages/add/confirm') {
+                $title = $_POST['title'];
+                $url_path = $_POST['url_path'];
+                $position = $_POST['position'];
+                $parent_id = $_POST['parent_id'];
+                if ($position == 0) {
+                    $position = null;
+                }
+
+                if ($parent_id == 0) {
+                    $parent_id = null;
+                }
+                Database::addPage($title, $url_path, $position, $parent_id);
+                header('Location: ' . $base_url . '/pages');
+            }
+
+            if (preg_match('/^\/pages\/delete-page\/[1-9][0-9]*+/', strtolower($url))) {
+                $id = explode('/', $url)[3];
+                AdminPageController::showPagesPage('/pages', $base_url, 'delete', $id);
+            }
+
+            if (preg_match('/^\/pages\/delete-page\/[1-9][0-9]*+\/confirm/', strtolower($url))) {
+                $id = explode('/', $url)[3];
+                Database::deletePage($id);
+                header('Location: ' . $base_url . '/pages');
+                }
+
+            if (preg_match('/^\/pages\/modify-page\/[1-9][0-9]*+/', strtolower($url))) {
+                $id = explode('/', $url)[3];
+                AdminPageController::showPagesPage('/pages', $base_url, 'modify', $id);
+            }
+
+            if (preg_match('/^\/pages\/modify-page\/[1-9][0-9]*+\/confirm/', strtolower($url))) {
+                $id = explode('/', $url)[3];
+                $title = $_POST['title'];
+                $url_path = $_POST['url_path'];
+                $position = $_POST['position'];
+                $parent_id = $_POST['parent_id'];
+                Database::modifyPage($id, $title, $url_path, $position, $parent_id);
+                header('Location: ' . $base_url . '/pages');
             }
 
             AdminNavbarController::showAdminNavbar($url, $base_url);

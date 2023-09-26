@@ -1,3 +1,7 @@
+<?php
+    ob_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,7 +29,7 @@
                 </div>
             <?php elseif ($url == '/pages'): ?>
                 <div class="page--actions">
-                    <a href="#" class="button button--primary">Créer une page</a>
+                    <a href="<?= $base_url ?>/pages/add" class="button button--primary">Créer une page</a>
                 </div>
             <?php elseif ($url == '/medias'): ?>
                 <div class="page--actions">
@@ -56,7 +60,43 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-            <?php endif; ?>
+            <?php elseif ($url == '/pages'): ?>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Titre</th>
+                            <th>Chemin</th>
+                            <th>Position</th>
+                            <th># Parent</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($pages as $page): ?>
+                            <tr>
+                                <td><?= $page['id'] ?></td>
+                                <td><?= $page['title'] ?></td>
+                                <td><?= $page['url_path'] ?></td>
+                                <?php if ($page['position'] == 0): ?>
+                                    <td>Non définie</td>
+                                <?php else: ?>
+                                    <td><?= $page['position'] ?></td>
+                                <?php endif; ?>
+                                <?php if ($page['parent_id'] == 0): ?>
+                                    <td>Non défini</td>
+                                <?php else: ?>
+                                    <td><?= $page['parent_id'] ?></td>
+                                <?php endif; ?>
+                                <td>
+                                    <a href="<?= $base_url ?>/pages/modify-page/<?= $page['id'] ?>" class="button button--primary">Modifier</a>
+                                    <a href="<?= $base_url ?>/pages/delete-page/<?= $page['id'] ?>" class="button button--danger">Supprimer</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php endif ?>
 
     </main>
 </body>

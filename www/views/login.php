@@ -9,7 +9,7 @@
     <title>CosmoDrôme</title>
 </head>
 
-<body>
+<body class="login--body">
     <div class="login--container">
         <h1>Connexion</h1>
         <form class="login--form" action="<?= $base_url ?>/login" method="post">

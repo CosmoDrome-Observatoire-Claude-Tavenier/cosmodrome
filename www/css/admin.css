@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 
-.login--body {
-    background-color: white;
-    height: 100vh;
-}
-
 body {  
     background-color: #1E1E1E;
     color: white;
     font-family: 'Inter', sans-serif;
+}
+
+.login--body {
+    background-color: white;
+    height: 100vh;
 }
 
 .login--container {
@@ -252,6 +252,7 @@ body {
     right: 0px;
     top: 75px;
     padding-right: 75px;
+    padding-bottom: 75px;
 }
 
 .page--top {

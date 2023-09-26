@@ -7,7 +7,7 @@ trait UsersTrait {
      */
     public static function getUsers() {
         $db = self::getInstance('../data/database.db');
-        $query = $db->prepare("SELECT id, username FROM Users");
+        $query = $db->prepare("SELECT id, username FROM Users ORDER BY id ASC");
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
