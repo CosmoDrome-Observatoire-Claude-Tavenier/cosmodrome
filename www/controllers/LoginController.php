@@ -15,10 +15,12 @@ class LoginController {
 
             // On vérifie si les données sont correctes
             if (Database::checkLogin($username, $password)) {
+                // On démarre une session
+                session_start();
                 // On connecte l'utilisateur
                 $_SESSION['username'] = $username;
 
-                // On redirige l'utilisateur vers la page d'accueil
+                // On redirige l'utilisateur vers la page d'administration
                 header('Location: .');
             } else {
                 // On affiche un message d'erreur
